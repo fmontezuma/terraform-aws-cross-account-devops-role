@@ -16,7 +16,7 @@ resource "aws_iam_role" "devops" {
         {
           "Effect": "Allow",
           "Principal": {
-            "AWS": "arn:aws:iam::${var.codebuild_deploy_role_arn}:root"
+            "AWS": "arn:aws:iam::${var.devops_account}:root"
           },
           "Action": "sts:AssumeRole",
           "Condition": {}
